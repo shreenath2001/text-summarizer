@@ -1,23 +1,15 @@
+{% extends 'base.html' %}
 {% load static %}
-<!DOCTYPE html>
-<html>
-    <head>
-        <meta charset="utf-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <title>Text Summarizer</title>
-        <meta name="description" content="Text Summarization">
-        <meta name="viewport" content="width=device-width, initial-scale=1">
 
-        <!-- Custom stylesheet -->
-        <link rel="stylesheet" href="{% static 'css/style.css' %}">
-
-        <!-- Favicon icon -->
-        <link rel="shortcut icon" href="{% static 'img/favicon.ico' %}" type="image/x-icon" >
-    </head>
-    <body>
-        
+{% block content %}
+    <div class = "container-fluid header">
         <h1>Text Summarization</h1>
+    </div>
 
-        <script src="{% static 'js/script.js' %}" async defer></script>
-    </body>
-</html>
+    <div class = "container main">
+        <h1 class = "mb-4">Text <span class = "second">summarizer</span> <span class = "desc">(To save your time)</span></h1>
+
+        <a href = "{% url 'summary' %}"><button class = "btn btn-success btn-lg btn-c">Get Started</button></a>
+        <a href = "{% url 'learn' %}"><button class = "btn btn-dark btn-lg btn-c">Learn More</button></a>
+    </div>
+{% endblock %}

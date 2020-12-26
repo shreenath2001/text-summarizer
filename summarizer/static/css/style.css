@@ -3,3 +3,39 @@
     padding: 0;
     box-sizing: border-box;
 }
+
+body{
+    background-color: rgb(153, 0, 255);
+}
+
+.header{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 10vh;
+    background-color: black;
+    color: white;
+}
+
+.main{
+    margin: 20vh;
+}
+
+.main h1{
+    font-size: 48px;
+    color: rgba(245, 245, 245, 0.979);
+}
+
+.second{
+    color: yellow;
+}
+
+.desc{
+    font-size: 24px;
+    color: black;
+}
+
+.btn-c:hover{
+    background-color: white;
+    color: rgb(39, 56, 4);
+}
