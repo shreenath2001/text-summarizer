@@ -2,5 +2,25 @@
 {% load static %}
 
 {% block content %}
-    
+    <div class = "container mt-5">
+        <h3>1. Through Direct Text:</h3>
+        <form action = "summarizeText" method = "POST">
+            {% csrf_token %}
+            <div class="form-group mb-4">
+                <textarea class="form-control" rows = "5" name = "text" placeholder = "Enter Your text here" required></textarea>
+            </div>
+            <button id = "clear-text" class = "btn btn-danger btn-lg btn-c" onclick="javascript:eraseText();">Clear Text</button>
+            <button type = "submit" class = "btn btn-primary btn-lg btn-c">Summarize</button>
+        </form>
+
+        <h3 class = "mt-5">2. Through URL:</h3>
+        <form action = "summarizeUrl" method = "POST">
+            {% csrf_token %}
+            <div class="form-group mb-4">
+                <textarea class="form-control" rows = "1" name = "url" placeholder = "Enter URL here" required></textarea>
+            </div>
+            <button id = "clear-url" class = "btn btn-danger btn-lg btn-c" onclick="javascript:eraseUrl();">Clear URL</button>
+            <button type = "submit" class = "btn btn-primary btn-lg btn-c">Summarize</button>
+        </form>
+    </div>
 {% endblock %}
