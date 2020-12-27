@@ -7,9 +7,9 @@
         <form action = "summarizeText" method = "POST">
             {% csrf_token %}
             <div class="form-group mb-4">
-                <textarea class="form-control" rows = "5" name = "text" placeholder = "Enter Your text here" required></textarea>
+                <textarea class="form-control" rows = "7" name = "text" placeholder = "Enter Your text here" required></textarea>
             </div>
-            <button id = "clear-text" class = "btn btn-danger btn-lg btn-c" onclick="javascript:eraseText();">Clear Text</button>
+            <button type = "reset" id = "clear-text" class = "btn btn-danger btn-lg btn-c" onclick="javascript:eraseText();">Clear Text</button>
             <button type = "submit" class = "btn btn-primary btn-lg btn-c">Summarize</button>
         </form>
 
@@ -19,8 +19,19 @@
             <div class="form-group mb-4">
                 <textarea class="form-control" rows = "1" name = "url" placeholder = "Enter URL here" required></textarea>
             </div>
-            <button id = "clear-url" class = "btn btn-danger btn-lg btn-c" onclick="javascript:eraseUrl();">Clear URL</button>
+            <button type = "reset" id = "clear-url" class = "btn btn-danger btn-lg btn-c" onclick="javascript:eraseUrl();">Clear URL</button>
             <button type = "submit" class = "btn btn-primary btn-lg btn-c">Summarize</button>
+        </form>
+
+        <h3 class = "mt-5">3. Through Image Text:</h3>
+        <form action = "summarizeImage" method = "POST" enctype="multipart/form-data">
+            {% csrf_token %}
+            <div class="form-group mb-4">
+                <input type="file"  accept="image/gif, image/jpeg, image/png" name="image" id="file"  onchange="loadFile(event)" onClick = "disp()" required>
+                <h4><label for="file" style="cursor: pointer;" class = "image-text">Select Image</label></h4>
+                <p><img id="output" /></p>
+                <button type = "submit" class = "btn btn-primary btn-lg btn-c" id = "classify">Summarize</button>
+            </div>
         </form>
     </div>
 {% endblock %}

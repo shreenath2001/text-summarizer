@@ -3,6 +3,7 @@
 
 {% block content %}
     <div class = "container mt-5 mb-5">
+        {% if rawtext %}
         <div class = "row">
             <div class = "col-10 col-sm-10 col-md-10 col-lg-5 rawtext">
                 <h3 style = "text-align:center" class = "mb-3">Original Text</h3>
@@ -13,5 +14,9 @@
                 {{rawtext}}
             </div>
         </div>
+        {% endif %}
+        {% if problem %}
+        <h2>{{problem}}</h2>
+        {% endif %}
     </div>
 {% endblock %}

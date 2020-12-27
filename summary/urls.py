@@ -9,4 +9,5 @@ urlpatterns = [
     path('learn/', views.learn, name = 'learn'),
     path('summarizer/summarizeText', views.summarizeText, name = 'summarizeText'),
     path('summarizer/summarizeUrl', views.summarizeUrl, name = 'summarizeUrl'),
+    path('summarizer/summarizeImage', views.summarizeImage, name = 'summarizeImage'),
 ]

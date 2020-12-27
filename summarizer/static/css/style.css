@@ -12,6 +12,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
+    font-family: 'Viaoda Libre', cursive;
     height: 10vh;
     background-color: black;
     color: white;
@@ -54,4 +55,47 @@ body{
     border: 2px solid #56d805;
     color:  #56d805;
     box-shadow: 1px 1px 1px 1px #56d805;
+}
+
+#file{
+    display: none;
+}
+
+img {
+    width: 250px;
+    border-radius: 5%;
+}
+
+.image-text {
+    border: 3px solid goldenrod;
+    background-color: rgb(223, 28, 14);
+    border-radius: 5%;
+    padding: 15px 10px;
+    color: white;
+}
+
+#classify {
+    margin: auto;
+    display: none;
+}
+
+.footer {
+    width: 100%;
+    background-color: rgb(153, 0, 255);
+    color: white;
+    margin:0px auto;
+    padding: 20px 0px 20px 0px;
+}
+
+.learn{
+    margin-top: 10vh;
+}
+
+.learn h3{
+    font-size: 48px;
+}
+
+.learn p{
+    font-size: 24px;
+    color: white;
 }
