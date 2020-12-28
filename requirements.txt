@@ -50,10 +50,6 @@ soupsieve==2.1
 spacy==2.3.5
 sqlparse==0.4.1
 srsly==1.0.5
-tensorboard==2.4.0
-tensorboard-plugin-wit==1.7.0
-tensorflow==2.4.0
-tensorflow-estimator==2.4.0
 termcolor==1.1.0
 thinc==7.4.5
 tqdm==4.55.0
