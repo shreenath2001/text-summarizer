@@ -28,7 +28,7 @@ SECRET_KEY = 'dj)^xgs0a4$o)p%78y7$*ske9ne*5x9sdezb67ig4zzy_j^$kr'
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['text-summarizer-app.herokuapp.com']
+ALLOWED_HOSTS = ['text-summarizer-app.herokuapp.com', 'localhost']
 
 
 # Application definition
