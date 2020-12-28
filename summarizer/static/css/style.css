@@ -19,7 +19,7 @@ body{
 }
 
 .main{
-    margin: 20vh;
+    margin-top: 5vh;
 }
 
 .main h1{
@@ -99,3 +99,12 @@ img {
     font-size: 24px;
     color: white;
 }
+
+@media only screen and (max-width: 600px) {
+    .main{
+        width: 100vw;
+    }
+    .main h1{
+        font-size: 32px;
+    }
+  }
