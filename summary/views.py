@@ -59,18 +59,25 @@ def summarizeUrl(request):
 
 def summarizeImage(request):
     if request.method == 'POST':
-        image = request.FILES['image']
-        fs = FileSystemStorage()
-        imageName = fs.save(image.name, image)
-        imageName = fs.url(imageName)
-        loc = '.' + imageName
-        img = Image.open(loc)
-        rawtext = pytesseract.image_to_string(img)
-        summary = nltk_summarizer(rawtext)
-        data = {
-            'rawtext':rawtext,
-            'summary':summary,
-        }
+        try:
+            image = request.FILES['image']
+            fs = FileSystemStorage()
+            imageName = fs.save(image.name, image)
+            imageName = fs.url(imageName)
+            loc = '.' + imageName
+            img = Image.open(loc)
+            rawtext = pytesseract.image_to_string(img)
+            summary = nltk_summarizer(rawtext)
+            data = {
+                'rawtext':rawtext,
+                'summary':summary,
+            }
+        except:
+            problem = "Sorry, Unable to process!"
+            data = {
+                'problem':problem,
+            }
+            
         return render(request, 'summary/result.html', data)
 
 def learn(request):
